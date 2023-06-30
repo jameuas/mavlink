@@ -4,7 +4,7 @@
   <dialect>0</dialect>
   <messages>
     <message id="700" name="AIRDATA_BOOM">
-      <description>Angle of Attack and Side Slip Angle message.</description>
+      <description>Air Data Boom message.</description>
       <field type="float" name="indicated_airspeed" units="m/s">Indicated Airspeed.</field>
       <field type="float" name="calibrated_airspeed" units="m/s">Calibrated Airspeed.</field>
       <field type="float" name="true_airspeed" units="m/s">True Airspeed.</field>
