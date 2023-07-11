@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<mavlink>
+  <!-- <version>0</version> -->
+  <dialect>0</dialect>
+  <messages>
+    <message id="700" name="AIRDATA_BOOM">
+      <description>Air Data Boom message.</description>
+      <field type="float" name="indicated_airspeed" units="m/s">Indicated Airspeed.</field>
+      <field type="float" name="calibrated_airspeed" units="m/s">Calibrated Airspeed.</field>
+      <field type="float" name="true_airspeed" units="m/s">True Airspeed.</field>
+      <field type="float" name="aoa" units="deg">Angle of Attack.</field>
+      <field type="float" name="aos" units="deg">Angle of Side Slip.</field>
+      <field type="float" name="air_temperature" units="degC">Air temperature (degrees C) from airspeed sensor.</field>
+    </message>
+    <message id="701" name="MOTOR_ELECTRICAL_SPEED">
+      <description>Motor Electrical Speed message.</description>
+      <field type="uint16_t" name="front_right_motor" units="rpm">Indicated motor1 RPM from ESC.</field>
+      <field type="uint16_t" name="back_left_motor" units="rpm">Indicated motor2 RPM from ESC.</field>
+      <field type="uint16_t" name="front_left_motor" units="rpm">Indicated motor3 RPM from ESC.</field>
+      <field type="uint16_t" name="back_right_motor" units="rpm">Indicated motor4 RPM from ESC.</field>
+      <field type="uint16_t" name="fixed_wing_motor" units="rpm">Indicated motor5 RPM from ESC.</field>
+    </message>
+  </messages>
+</mavlink>
