@@ -3,20 +3,22 @@
   <!-- <version>0</version> -->
   <dialect>0</dialect>
   <messages>
-    <message id="700" name="SYS_IDEN_DATA">
-      <description>System Identification Data message.</description>
-      <field type="float" name="p" units="rad/s">Angular rates about the body frame X-axis (roll)</field>
-      <field type="float" name="q" units="rad/s">Angular rates about the body frame Y-axis (pitch)</field>
-      <field type="float" name="r" units="rad/s">Angular rates about the body frame Z-axis (yaw)</field>
-      <field type="float" name="ax" units="m/s/s">Acceleration (including gravity) in the body frame X-axis</field>
-      <field type="float" name="ay" units="m/s/s">Acceleration (including gravity) in the body frame Y-axis</field>
-      <field type="float" name="az" units="m/s/s">Acceleration (including gravity) in the body frame Z-axis</field>
-      <field type="float" name="v" units="m/s">Airspeed</field>
-      <field type="float" name="alpha" units="deg">Angle of Attack</field>
-      <field type="float" name="beta" units="deg">Angle of Side Slip</field>
-      <field type="float" name="ail" units="deg">Control input (roll)</field>
-      <field type="float" name="ele" units="deg">Control input (pitch)</field>
-      <field type="float" name="rud" units="deg">Control input (yaw)</field>
+    <message id="700" name="AIRDATA_BOOM">
+      <description>Air Data Boom message.</description>
+      <field type="float" name="indicated_airspeed" units="m/s">Indicated Airspeed.</field>
+      <field type="float" name="calibrated_airspeed" units="m/s">Calibrated Airspeed.</field>
+      <field type="float" name="true_airspeed" units="m/s">True Airspeed.</field>
+      <field type="float" name="aoa" units="deg">Angle of Attack.</field>
+      <field type="float" name="aos" units="deg">Angle of Side Slip.</field>
+      <field type="float" name="air_temperature" units="degC">Air temperature (degrees C) from airspeed sensor.</field>
+    </message>
+    <message id="701" name="MOTOR_ELECTRICAL_SPEED">
+      <description>Motor Electrical Speed message.</description>
+      <field type="uint16_t" name="front_right_motor" units="rpm">Indicated motor1 RPM from ESC.</field>
+      <field type="uint16_t" name="back_left_motor" units="rpm">Indicated motor2 RPM from ESC.</field>
+      <field type="uint16_t" name="front_left_motor" units="rpm">Indicated motor3 RPM from ESC.</field>
+      <field type="uint16_t" name="back_right_motor" units="rpm">Indicated motor4 RPM from ESC.</field>
+      <field type="uint16_t" name="fixed_wing_motor" units="rpm">Indicated motor5 RPM from ESC.</field>
     </message>
   </messages>
 </mavlink>
